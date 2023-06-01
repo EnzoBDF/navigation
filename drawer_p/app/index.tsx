@@ -15,7 +15,7 @@ export default function App() {
       <TextInput placeholder='    qualquer coisa' style={styles.input}></TextInput>
       <TextInput placeholder='    qualquer coisa' style={styles.input}></TextInput>
       <TouchableOpacity style={styles.button}>
-      <Text style={{fontWeight:'700', fontFamily:'monospace', fontSize:'22'}}><Link href="/telaA">Ir para a tela A</Link></Text>
+      <Text style={{fontWeight:'700', fontFamily:'monospace', fontSize:'22'}}><Link href="/telaA">Cadastrar</Link></Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
         </View>

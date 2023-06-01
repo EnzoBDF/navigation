@@ -15,8 +15,8 @@ export default function AppLayout() {
     <Drawer.Screen
       name="telaA" // This is the name of the page and must match the url from root
       options={{
-        drawerLabel: "User",
-        title: "Bem-vindo a tela A",
+        drawerLabel: "Login",
+        title: "Faça seu login",
 /*         drawerItemStyle: { height:0} 
  */      }}
     />
