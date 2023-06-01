@@ -1,4 +1,6 @@
 import { Drawer } from "expo-router/drawer";
+import { View, StyleSheet } from "react-native";
+
 
 export default function AppLayout() {
   return (
@@ -7,7 +9,7 @@ export default function AppLayout() {
       name="index" // This is the name of the page and must match the url from root
       options={{
         drawerLabel: "Home",
-        title: "Principal",
+        title: "Cadastro",
       }}
     />
     <Drawer.Screen
@@ -25,6 +27,29 @@ export default function AppLayout() {
         title: "Bem-vindo a tela B",
       }}
     />
+       <Drawer.Screen
+      name="Tela C" // This is the name of the page and must match the url from root
+      options={{
+        drawerLabel: "Tela C",
+        title: "Bem-vindo a tela C",
+      }}
+    />
   </Drawer>
   );
 }
+
+
+const styles = StyleSheet.create({
+  drawer: {
+    backgroundColor: "purple",
+  },
+  drawerContent: {
+    flex: 1,
+    backgroundColor: "purple",
+    paddingVertical: 20,
+  },
+});
+
+
+
+
