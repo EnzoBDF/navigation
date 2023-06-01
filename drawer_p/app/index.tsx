@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput,} from 'react-native';
 import { Link } from "expo-router";
 
 
@@ -7,9 +7,17 @@ import { Link } from "expo-router";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>bem-vindo ao home</Text>
-      <Link href="/telaA">Home</Link>
+        <View style={{display:'flex', alignItems:'center',}}>
+      <Text style={styles.titulo}>cadastro</Text>
+      <TextInput placeholder='    qualquer coisa' style={styles.input}></TextInput>
+      <TextInput placeholder='    qualquer coisa' style={styles.input}></TextInput>
+      <TextInput placeholder='    qualquer coisa' style={styles.input}></TextInput>
+      <TextInput placeholder='    qualquer coisa' style={styles.input}></TextInput>
+      <TouchableOpacity style={styles.button}>
+      <Text style={{fontWeight:'700', fontFamily:'monospace', fontSize:'22'}}><Link href="/telaA">Ir para a tela A</Link></Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
+        </View>
     </View>
   );
 }
@@ -22,9 +30,37 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   titulo:{
-    fontSize:26,
-    fontWeight:'bold'
+    fontSize:20,
+    fontWeight:'bold',
+    marginBottom:15, 
+    fontFamily:'monospace', 
+    padding: 20,
+    backgroundColor:'#e0efff',
+    borderRadius:7,
   },
+
+  button:{
+    padding:10,
+    backgroundColor:'transparent',
+    width:200,
+    borderRadius:10,
+    color:'#FFF',
+    borderWidth:2,
+    borderBottomWidth:5,
+    textAlign:'center',
+    borderColor:'#e0efff',
+
+  },
+  input:{
+    width: 300,
+    height:40,
+    borderWidth:1,
+    borderRadius:5,
+    marginBottom:15,
+    borderColor:'#e2e2e2',
+    borderBottomWidth:2,
+    borderRightWidth:2,
+  }
 
 
 });
